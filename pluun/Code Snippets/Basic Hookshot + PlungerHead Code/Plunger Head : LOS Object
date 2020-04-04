@@ -1,0 +1,23 @@
+//oLOS Create
+
+if(obj_Player.facing == "LEFT") {direction = 180; speed = 40;}
+if(obj_Player.facing == "RIGHT") {direction = 0; speed = 40;}
+if(obj_Player.facing == "UP") {direction = 90; speed = 40;}
+
+//oLOS Step
+
+//Cancelling throw 
+
+if(keyboard_check_released(ord("X")))
+	{
+	instance_destroy(oLOS)
+	}
+    
+//oLOS Collision
+    
+//register hit and destroy
+obj_Player.LOSx = x
+obj_Player.LOSy = y
+
+instance_destroy(oLOS);
+obj_Player.plunger_trig = 1
